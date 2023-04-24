@@ -3,11 +3,17 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/yaks" method="POST">
+  <h1> <%= title  %></h1>
+  <h1><%= yak.message %></h1>
+  <form 
+    id="new-form" 
+    action="/yaks/<%= yak._id %>?_method=PUT"
+    method="POST"
+    >
     <label for="message-input">Message:</label>
     <input type="text" name="message" id="message-input">
-    <button type="submit">POST YAK</button>
+    <button type="submit">Update Yak</button>
   </form>
 </main>
+
 <%- include("../partials/footer") %>

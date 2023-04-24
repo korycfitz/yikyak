@@ -11,7 +11,7 @@ function create(req, res) {
     req.body.likes = req.body.likes.split(', ')
   }
   //link author to user profile
-  req.body.author = req.user.profile._id
+  // req.body.author = req.user.profile._id
   Yak.create(req.body)
   .then(yak => {
     console.log(req.body)
