@@ -4,10 +4,17 @@
 </head>
 <body>
   <nav>
+    <h1> <%= title %></h1>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
+        <i class="fas fa-film fa-2x"></i>
+        <a 
+          href="/yaks/new" class=<%= title === 'Add Yak' ? 'active' : '' %>
+        >
+          POST YAK
+        </a>
     <% } else { %>
       <div 
         id="g_id_onload"
