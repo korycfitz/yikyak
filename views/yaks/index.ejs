@@ -7,13 +7,14 @@
       <tr>
         <td id="yak"><%= yak.message %></td>
         <td><%= yak.likes %></td>
-        <td><a href="/yaks/<%= yak._id %>">Comments</a></td>
+        <td><a href="/yaks/<%= yak._id %>">Comment</a></td>
         <td>
           <!-- only want to give creater this view -->
           <form action="/yaks/<%= yak._id %>?_method=DELETE" method="POST">
             <button type="submit">X</button>
           </form>
-        </td>
+        </td>        
+        <td><a href="/yaks/<%= yak._id %>">Edit</a></td>
       </tr>
       <% }) %>
     </tbody>

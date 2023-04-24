@@ -7,13 +7,14 @@ function newYak(req, res) {
 }
 
 function create(req, res) {
-  //link author to user profile
-  req.body.author = req.user.profile._id
   if (req.body.likes) {
     req.body.likes = req.body.likes.split(', ')
   }
+  //link author to user profile
+  req.body.author = req.user.profile._id
   Yak.create(req.body)
   .then(yak => {
+    console.log(req.body)
     res.redirect('/yaks')
   })
   .catch(err => {
@@ -36,7 +37,19 @@ function index(req, res) {
   })
 }
 
-
+function show(req, res) {
+  Yak.findById(req.params.yakId)
+  .then(yak => {
+    res.render('yaks/show', { 
+      title: 'Edit Yak', 
+      yak: yak
+    })    
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 
 // going to use this later on
@@ -66,4 +79,5 @@ export {
   newYak as new,
   create,
   index,
+  show,
 }
