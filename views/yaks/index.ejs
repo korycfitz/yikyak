@@ -1,0 +1,32 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/yaks/index.css" />
+<%- include('../partials/nav') %>
+<main>
+  <h1>Yak List</h1>
+  <table id="list">
+    <thead>
+      <tr>
+        <th>Message</th>
+        <th>Likes</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% yaks.forEach((yak) => { %>
+      <tr>
+        <td><%= yak.message %></td>
+        <td><%= yak.likes %></td>
+        <td><a href="/yaks/<%= yak._id %>">DETAILS</a></td>
+        <td>
+          <form action="/yaks/<%= yak._id %>?_method=DELETE" method="POST">
+            <button type="submit">X</button>
+          </form>
+      </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>
