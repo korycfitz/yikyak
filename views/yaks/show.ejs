@@ -2,10 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
 <main>
-  <div>
   <h1><%= yak.message %></h1>   
-  <!-- only show for owner of that yak -->
-    <a href="/yak/<%= yak._id %>/edit">
+  <div>
+    <a href="/yaks/<%= yak._id %>/edit">
       <button>Edit Yak</button>
     </a>
   </div>
