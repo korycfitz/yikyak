@@ -76,7 +76,22 @@ function edit(req, res) {
   })
 }
 
-
+function update(req, res) {
+  for (let key in req.body) {
+    if(req.body[key] === "") delete req.body[key]
+  }
+  if (req.body.likes) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
+  .then(yak => {
+    res.redirect(`/yaks/${yak._id}`)
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 // going to use this later on
 // function createFact(req, res) {
@@ -108,4 +123,5 @@ export {
   show,
   deleteYak as delete,
   edit,
+  update,
 }

@@ -2,7 +2,14 @@
 <link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
 <main>
-  <h1><%= yak.message %></h1>    
+  <div>
+  <h1><%= yak.message %></h1>   
+  <!-- only show for owner of that yak -->
+    <a href="/yak/<%= yak._id %>/edit">
+      <button>Edit Yak</button>
+    </a>
+  </div>
+<br>
   <div> <%= yak.likes.join(', ') %> </div>
     <div class="card-footer">
       <form
