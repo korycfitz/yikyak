@@ -2,4 +2,12 @@
 <link rel="stylesheet" href="/stylesheets/yaks/forms.css" />
 <%- include('../partials/nav') %>
 
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/yaks" method="POST">
+    <label for="message-input">Message:</label>
+    <input type="text" name="message" id="message-input">
+    <button type="submit">POST YAK</button>
+  </form>
+</main>
 <%- include("../partials/footer") %>

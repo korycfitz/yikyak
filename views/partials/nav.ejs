@@ -1,17 +1,43 @@
   <% if (!user) { %>
-    <script defer src="https://accounts.google.com/gsi/client"></script>
+    <script defer src="https://accounts.google.com/gsi/client"></script> 
   <% } %>
 </head>
 <body>
   <nav>
-    <h1> <%= title %></h1>
+    <h1> yikyak </h1>
     <% if (user) { %>
+
+
+
+      <!-- going to use this to add filters -->
+      <div class="card-footer">
+        <form
+          action="/profiles/facts"
+          method="POST"
+          class="input-group"
+        >
+          <input
+            type="text"
+            name="text"
+            class="form-control form-control-dark"
+            placeholder="Add a fact..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn btn-primary">
+            Add Fact
+          </button>
+        </form>
+      </div>
+      <!-- going to use this to add filters -->
+
+
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
         <i class="fas fa-film fa-2x"></i>
         <a 
-          href="/yaks/new" class=<%= title === 'Post Yak' ? 'active' : '' %>
+          href="/yaks/new" class=<%= title === 'Add Yak' ? 'active' : '' %>
         >
           POST YAK
         </a>
