@@ -7,9 +7,11 @@ function newYak(req, res) {
 }
 
 function create(req, res) {
-  if (req.body.likes) {
-    req.body.likes = req.body.likes.split(', ')
-  }
+  //link author to user profile
+  req.body.author = req.user.profile._id
+  // if (req.body.likes) {
+  //   req.body.likes = req.body.likes.split(', ')
+  // }
   Yak.create(req.body)
   .then(yak => {
     res.redirect('/yaks/new')
@@ -19,6 +21,25 @@ function create(req, res) {
     res.redirect('/yaks/new')
   })
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // going to use this later on
 // function createFact(req, res) {
 //   // find the profile 
@@ -45,5 +66,4 @@ function create(req, res) {
 export {
   newYak as new,
   create,
-  createFact,
 }

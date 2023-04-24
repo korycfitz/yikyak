@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 const yakSchema = new Schema({
   message: { type: String, required: true },
-  likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
+  // likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
   author: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  comments: [commentSchema],
+  // comments: [commentSchema],
 }, {
   timestamps: true,
 })
