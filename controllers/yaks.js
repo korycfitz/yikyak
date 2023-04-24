@@ -51,6 +51,19 @@ function show(req, res) {
   })
 }
 
+function deleteYak(req, res) {
+  Yak.findByIdAndDelete(req.params.yakId)
+  .then(yak => {
+    res.redirect("/yaks")
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/yaks")
+  })
+}
+
+
+
 
 // going to use this later on
 // function createFact(req, res) {
@@ -80,4 +93,5 @@ export {
   create,
   index,
   show,
+  deleteYak as delete,
 }
