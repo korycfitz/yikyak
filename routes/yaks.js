@@ -10,6 +10,7 @@ router.get('/new', yaksCtrl.new)
 // POST /yaks
 router.post('/', yaksCtrl.create)
 router.get('/:yakId', yaksCtrl.show)
+
 export {
 	router
 }

@@ -1,0 +1,13 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/yaks/show.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= yak.message %></h1>
+  <section>    
+    <div>comments</div>
+    <div><%= yak.likes.join(', ') %></div>
+  </section>
+</main>
+  
+<%- include('../partials/footer') %>
