@@ -2,10 +2,6 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <div>
-
-  <!-- have all yaks displayed here -->
-</div>
   <!-- remove next line  -->
   <h1><%= user ? `Welcome - ${user.profile.name}` : "Tap the Sign-in Button above" %></h1>
   <% if (user?.profile.avatar) { %>

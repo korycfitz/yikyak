@@ -41,7 +41,7 @@ function show(req, res) {
   Yak.findById(req.params.yakId)
   .then(yak => {
     res.render('yaks/show', { 
-      title: 'Edit Yak', 
+      title: 'Add Comment', 
       yak: yak
     })    
   })
@@ -62,6 +62,19 @@ function deleteYak(req, res) {
   })
 }
 
+function edit(req, res) {
+  Yak.findById(req.params.yakId)
+  .then(yak => {
+    res.render("yaks/edit", {
+      yak,
+      title: "Edit Yak"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/")
+  })
+}
 
 
 
@@ -94,4 +107,5 @@ export {
   index,
   show,
   deleteYak as delete,
+  edit,
 }

@@ -9,7 +9,6 @@
 
 
 
-      
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
       </a>
@@ -18,6 +17,11 @@
           href="/yaks/new" class=<%= title === 'Post Yak' ? 'active' : '' %>
         >
           POST YAK
+        </a>
+        <a 
+          href="/yaks" class=<%= title === 'All Yaks' ? 'active' : '' %>
+        >
+          ALL YAKS
         </a>
     <% } else { %>
       <div 

@@ -12,6 +12,9 @@ router.post('/', yaksCtrl.create)
 router.get('/:yakId', yaksCtrl.show)
 // localhost:3000/yaks/:yakId
 router.delete("/:yakId", yaksCtrl.delete)
+// localhost:3000/yaks/:yakId/edit
+router.get("/:yakId/edit", yaksCtrl.edit)
+
 export {
 	router
 }
