@@ -2,19 +2,19 @@ import { Yak } from '../models/yak.js'
 
 function newYak(req, res) {
   res.render("yaks/new", {
-    title: "Add Yak",
+    title: "Post Yak",
   })
 }
 
 function create(req, res) {
   //link author to user profile
   req.body.author = req.user.profile._id
-  // if (req.body.likes) {
-  //   req.body.likes = req.body.likes.split(', ')
-  // }
+  if (req.body.likes) {
+    req.body.likes = req.body.likes.split(', ')
+  }
   Yak.create(req.body)
   .then(yak => {
-    res.redirect('/yaks/new')
+    res.redirect('/yaks')
   })
   .catch(err => {
     console.log(err)
@@ -22,20 +22,19 @@ function create(req, res) {
   })
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function index(req, res) {
+  Yak.find({})
+  .then(yaks => {
+    res.render('yaks/index', {
+      yaks: yaks,
+      title: 'All Yaks'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/yaks/new')
+  })
+}
 
 
 
@@ -66,4 +65,5 @@ function create(req, res) {
 export {
   newYak as new,
   create,
+  index,
 }
