@@ -9,6 +9,7 @@ router.get('/', yaksCtrl.index)
 router.get('/new', yaksCtrl.new)
 // POST /yaks
 router.post('/', yaksCtrl.create)
+router.post('/:yakId/comments', yaksCtrl.createComment)
 router.get('/:yakId', yaksCtrl.show)
 // localhost:3000/yaks/:yakId
 router.delete("/:yakId", yaksCtrl.delete)

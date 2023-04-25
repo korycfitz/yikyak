@@ -90,6 +90,24 @@ function update(req, res) {
   })
 }
 
+function createComment(req, res) {
+  Yak.findById(req.params.yakId)
+  .then(yak => {
+    yak.comments.push(req.body)
+    yak.save()
+    .then(() => {
+      res.redirect(`/yaks/${yak._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
 // going to use this later on
 // function createFact(req, res) {
 //   // find the profile 
@@ -121,4 +139,5 @@ export {
   deleteYak as delete,
   edit,
   update,
+  createComment,
 }

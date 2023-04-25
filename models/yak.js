@@ -6,13 +6,15 @@ const commentSchema = new Schema({
   content: { type: String, required: true },
   author: { type: Schema.Types.ObjectId, ref: 'Profile' },
   likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
+}, {
+    timestamps: true,
 })
 
 const yakSchema = new Schema({
   message: { type: String, required: true },
-  likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
   author: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  // comments: [commentSchema],
+  likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
+  comments: [commentSchema],
 }, {
   timestamps: true,
 })

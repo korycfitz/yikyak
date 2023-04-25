@@ -2,33 +2,34 @@
 <link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
 <main>
+
   <h1><%= yak.message %></h1>   
+  <div> <%= yak.likes.join(', ') %> </div>
+
   <div>
     <a href="/yaks/<%= yak._id %>/edit">
       <button>Edit Yak</button>
     </a>
   </div>
-<br>
-  <div> <%= yak.likes.join(', ') %> </div>
-    <div class="card-footer">
-      <form
-        action="/yaks/<%= yak._id %>"
-        method="POST"
-        class="input-group"
-      >
-        <input
-          type="text"
-          name="text"
-          class="form-control form-control-dark"
-          placeholder="Enter Comment Here"
-          autocomplete="off"
-          required
-        />
-        <button type="submit" class="btn btn-comment">
-          Comment
-        </button>
-        </form>
-      </div>
+  <h2>Comments</h2>
+
+<form 
+  id="add-comment-form"
+  action="/yaks/<%= yak._id %>/comments"
+  method="POST"
+>
+  <label for="content-textarea">Comment:</label>
+  <textarea name="content" 
+    class="form-control form-control-dark"
+    id="content-textarea"
+    placeholder="Enter Comment Here"
+    autocomplete="off"
+    required
+  ></textarea>
+  <button type="submit" class="btn btn-comment">
+    Post Comment
+  </button>
+</form>
 </main>
 
 <%- include('../partials/footer') %>
