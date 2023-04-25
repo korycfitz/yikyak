@@ -16,41 +16,43 @@
     action="/yaks/<%= yak._id %>/comments"
     method="POST"
   >
-  <label for="content-textarea">Comment:</label>
+  <label for="content-textarea">Reply:</label>
   <textarea name="content" 
     class="form-control form-control-dark"
     id="content-textarea"
-    placeholder="Enter Comment Here:"
+    placeholder="Enter Reply Here..."
     autocomplete="off"
     required
   ></textarea>
   <button type="submit" class="btn btn-comment">
-    Post Comment
+    Post Reply
   </button>
 </form>
-<!-- need to add comments here -->
+<!-- need to add reply here -->
 <% if (yak.comments.length) { %>
-  <h2>Comments</h2>
+  <h2>Replies</h2>
   <table>
     <thead>
       <tr>
-        <th>Comment</th>
-        <th>Likes</th>
-        <th>Date</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% yak.comments.forEach(function(comment) { %>
         <tr>
           <td><%= comment.content %></td>
-          <td><%= comment.Likes %></td>
           <td><%= comment.createdAt.toLocaleDateString() %></td>
+          <td><%= comment.createdAt.toLocaleTimeString() %></td>
+          <td><%= comment.Likes %></td>
         </tr>
       <% }) %>
     </tbody>
   </table>
 <% } else { %>
-  <h2>No Comments</h2>
+  <h2>No Replies Yet</h2>
 <% } %>
 
 </main>

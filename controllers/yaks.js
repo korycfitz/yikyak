@@ -7,11 +7,10 @@ function newYak(req, res) {
 }
 
 function create(req, res) {
+  req.body.author = req.user.profile._id
   if (req.body.likes) {
     req.body.likes = req.body.likes.split(', ')
   }
-  //link author to user profile
-  // req.body.author = req.user.profile._id
   Yak.create(req.body)
   .then(yak => {
     console.log(req.body)
@@ -33,12 +32,13 @@ function index(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/yaks/new')
+    res.redirect('/yaks')
   })
 }
 
 function show(req, res) {
   Yak.findById(req.params.yakId)
+  // .populate("author")
   .then(yak => {
     res.render('yaks/show', { 
       title: 'Add Comment', 
