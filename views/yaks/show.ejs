@@ -2,27 +2,25 @@
 <link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
 <main>
-
-  <h1><%= yak.message %></h1>   
-  <div> <%= yak.likes.join(', ') %> </div>
-
-  <div>
+  <h1>
+    <%= yak.message %>
+    <%= yak.createdAt.toLocaleDateString() %> 
     <a href="/yaks/<%= yak._id %>/edit">
       <button>Edit Yak</button>
     </a>
-  </div>
-  <h2>Comments</h2>
-
-<form 
-  id="add-comment-form"
-  action="/yaks/<%= yak._id %>/comments"
-  method="POST"
->
+  </h1>
+  <div> <%= yak.likes.join(', ') %> </div>
+  <!-- add likes here -->
+  <form 
+    id="add-comment-form"
+    action="/yaks/<%= yak._id %>/comments"
+    method="POST"
+  >
   <label for="content-textarea">Comment:</label>
   <textarea name="content" 
     class="form-control form-control-dark"
     id="content-textarea"
-    placeholder="Enter Comment Here"
+    placeholder="Enter Comment Here:"
     autocomplete="off"
     required
   ></textarea>
@@ -30,6 +28,31 @@
     Post Comment
   </button>
 </form>
+<!-- need to add comments here -->
+<% if (yak.comments.length) { %>
+  <h2>Comments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Comment</th>
+        <th>Likes</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% yak.comments.forEach(function(comment) { %>
+        <tr>
+          <td><%= comment.content %></td>
+          <td><%= comment.Likes %></td>
+          <td><%= comment.createdAt.toLocaleDateString() %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } else { %>
+  <h2>No Comments</h2>
+<% } %>
+
 </main>
 
 <%- include('../partials/footer') %>
