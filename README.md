@@ -27,7 +27,8 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [The-Documentation-Compendium by Kyle Lobo](https://github.com/kylelobo/The-Documentation-Compendium) - README Format
 - [Annimate.css](https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css) - Annimation
 - [Google Fonts](https://fonts.google.com/) - Style
-- [Flaticon](https://www.flaticon.com/) - Favicon
+- [Flaticon](https://pngtree.com/so/ox-logo) - Favicon
+
 
 ## ⛏️ Technologies Used
 
