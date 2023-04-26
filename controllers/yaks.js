@@ -11,6 +11,15 @@ function create(req, res) {
   if (req.body.likes) {
     req.body.likes = req.body.likes.split(', ')
   }
+  if (req.body.comments) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  if (req.body.yaks) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Yak.create(req.body)
   .then(yak => {
     console.log(req.body)
@@ -37,6 +46,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
+  console.log(req.body)
   Yak.findById(req.params.yakId)
   // .populate("author")
   .then(yak => {
@@ -60,6 +70,7 @@ function deleteYak(req, res) {
     console.log(err)
     res.redirect("/yaks")
   })
+  
 }
 
 function edit(req, res) {
@@ -80,6 +91,15 @@ function update(req, res) {
   if (req.body.likes) {
     req.body.likes = req.body.likes.split(', ')
   }
+  if (req.body.comments) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  if (req.body.yaks) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
   .then(yak => {
     res.redirect(`/yaks/${yak._id}`)
@@ -91,6 +111,12 @@ function update(req, res) {
 }
 
 function createComment(req, res) {
+  if (req.body.likes) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Yak.findById(req.params.yakId)
   .then(yak => {
     yak.comments.push(req.body)
@@ -108,28 +134,6 @@ function createComment(req, res) {
     res.redirect('/')
   })
 }
-// going to use this later on
-// function createFact(req, res) {
-//   // find the profile 
-//   Profile.findById(req.user.profile._id)
-//   .then(profile => {
-//     // push the req.body form data into the facts array
-//     profile.facts.push(req.body)
-//     profile.save()
-//     .then(() => {
-//       res.redirect('/profiles')
-//     })
-//     .catch(err => {
-//       console.log(err)
-//       res.redirect('/profiles')
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/profiles')
-//   })
-// }
-//going to use this after we create profile
 
 export {
   newYak as new,

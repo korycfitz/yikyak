@@ -44,11 +44,11 @@ section div:nth-child(even) {
   margin-bottom: 20px;
 }
 
-#add-review-form > textarea {
+#add-reply-form > textarea {
   width: 250px;
 }
 
-#add-review-form > button {
+#add-reply-form > button {
   font-size: 16px;
   width: 160px;
   grid-column: 2 / 3;
