@@ -11,7 +11,7 @@
 
 ## 🧐 About
 
-I decided to build this application because social media users are often disuaded from posting what's on their mind, because of public perception. Yikyak, the most popular social media platform for annonymous posting, was removed in the United States. pencil and paper games. In addition, Christmas is both the best holiday of the year and my middle name. As a result, this project was built to combine the two.
+I decided to build this application because social media users are often disuaded from posting what's on their mind, because of their fear of public perception. Yikyak, the most popular social media platform for annonymous posting, was removed in the United States. In response, I built this application to give back to the users their ability to stay annoymous while posting.
 
 ## 🏁 Getting Started
 
