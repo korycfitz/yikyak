@@ -32,7 +32,7 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e8eceb;
+  background-color: rgb(186, 196, 188);
   padding: 20px;
 }
 
@@ -42,7 +42,7 @@ body > main h1:first-child {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: rgb(53, 194, 131);
   display: flex;
   justify-content: flex-end;
   align-items: center;

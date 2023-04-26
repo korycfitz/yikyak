@@ -2,9 +2,10 @@
 <link rel="stylesheet" href="/stylesheets/yaks/index.css" />
 <%- include('../partials/nav') %>
 <main>
-  <table class="container" id="list">
+  <table class="container">
       <% yaks.forEach((yak) => { %>
       <tr class="row">
+        <td><%= yak.createdAt.toLocaleTimeString() %></td>
         <td id=<%= yak.author %>><%= yak.message %></td>
         <td><%= yak.likes %></td>
         <td><a href="/yaks/<%= yak._id %>">Replies</a></td>
