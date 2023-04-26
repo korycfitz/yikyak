@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for kory-fitz-yikyak on 2023-04-24T20:47:12-04:00
+# fly.toml app configuration file generated for annonymous on 2023-04-26T10:50:40-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "kory-fitz-yikyak"
+app = "annonymous"
 primary_region = "bos"
 
 [env]
