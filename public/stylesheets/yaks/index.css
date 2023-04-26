@@ -1,18 +1,27 @@
 table {
-  font-size: 30px;
+  font-size: 30px;      
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 0, 5px, 0, 0 rgb(180, 31, 31);
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: rgb(244, 244, 244);
 }
 
-table td {
-  padding: 10px;
-  text-align: center;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 .container td:nth-child(1) {
-  min-width: 200fr;
+  min-width: 250px;
 }
 
 .container td:nth-child(2) {
-  min-width: 500fr;
+  min-width: 500px;
 }
 
 .container td:nth-child(3) {
@@ -48,7 +57,6 @@ table td {
 
 .row {  
   height: calc(15vh - 5px);
-  background-color: #c5cbc6;
   padding: 20px;
   border: 1px solid #1a0606;
   border-radius: 5px;

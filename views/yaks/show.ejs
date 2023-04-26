@@ -11,11 +11,11 @@
   <div> <%= yak.likes.join(', ') %> </div>
   <!-- add likes here -->
   <form 
-    id="add-comment-form"
+    id="reply-form"
     action="/yaks/<%= yak._id %>/comments"
     method="POST"
   >
-  <label for="content-textarea">Reply:</label>
+  <label for="reply-form">Reply:</label>
   <textarea name="content" 
     class="form-control form-control-dark"
     id="content-textarea"
@@ -23,7 +23,7 @@
     autocomplete="off"
     required
   ></textarea>
-  <button type="submit" class="btn btn-comment">
+  <button type="submit" class="btn btn-reply">
     Post Reply
   </button>
 </form>

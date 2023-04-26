@@ -44,7 +44,7 @@ section div:nth-child(even) {
   margin-bottom: 20px;
 }
 
-#add-reply-form > textarea {
+#add-reply-form > reply-form {
   width: 250px;
 }
 
