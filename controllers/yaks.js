@@ -86,20 +86,11 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  if (req.body.likes) {
-    req.body.likes = req.body.likes.split(', ')
-  }
-  if (req.body.comments) {
-    req.body.likes = req.body.likes.split(', ')
-  }
-  if (req.body.yaks) {
-    req.body.likes = req.body.likes.split(', ')
-  }
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
-  Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
+  Yak.findById(req.params.tacoId)
   .then(yak => {
+    if (yak.owner.equals(req.user.profile._id)) {
+      Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
+    }
     res.redirect(`/yaks/${yak._id}`)
   })
   .catch(err => {
