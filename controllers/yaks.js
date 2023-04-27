@@ -34,7 +34,6 @@ function index(req, res) {
   Yak.find({})
   .populate('owner')
   .then(yaks => {
-    console.log(yaks)
     res.render('yaks/index', {
       yaks: yaks,
       title: 'All Yaks'

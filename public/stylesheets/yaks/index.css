@@ -72,7 +72,6 @@ tr:nth-child(even) {
   background-color: #d9d4d4;
 }
 
-td > a {
-  height: 50px;
+.reply-tag a {
   background-color: #d12828;
 }

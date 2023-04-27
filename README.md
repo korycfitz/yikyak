@@ -2,11 +2,11 @@
  <img height=300px src="./assets/christmas-ship.png" alt="Project logo"></a>
 </div>
 
-<h3 align="center">Annonymous</h3>
+<h3 align="center">Yikyak</h3>
 
 ---
 
-<p align="center"> Welcome to Annonymous. This social media platform allows users to share what's on their mind, while staying completely annonymous.
+<p align="center"> Welcome to Yikyak. This social media platform allows users to share what's on their mind, while staying completely annonymous.
 </p>
 
 ## 🧐 About
@@ -15,9 +15,10 @@ I decided to build this application because social media users are often disuade
 
 ## 🏁 Getting Started
 
-Visit https://annonymous.fly.dev/ <a href="https://annonymous.fly.dev/">Annonymous.fly.dev</a>
+Visit <a href="https://annonymous.fly.dev/">Annonymous.fly.dev</a> to use the app.
 
 ### Prerequisites
+
 Access to the internet is required.<br>
 The latest version of Google Chrome is recommended for the best user experience, but not required.
 
@@ -26,17 +27,26 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [The-Documentation-Compendium by Kyle Lobo](https://github.com/kylelobo/The-Documentation-Compendium) - README Format
 - [Google Fonts](https://fonts.google.com/) - Style
 - [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
-- [Flaticon](https://www.flaticon.com) - Image
+- [Flaticon](https://www.flaticon.com) - Images
 
 ## ⛏️ Technologies Used
 
-- HTML - Structure
-- CSS - Style
-- JavaScript - User Interaction
 - [Fly](https://fly.io/) - Deployment
 - [Github](https://github.com/) - Version Control, Code Hosting
 - [Git](https://git-scm.com/) - Version Control and Source Code Management
 - [Visual Studio Code](https://code.visualstudio.com/) - Debugging, Version Control
+- [EJS](https://code.visualstudio.com/) - User Interface
+- [Trello](https://code.visualstudio.com/) - Project Planning
+- [Mongoose](https://code.visualstudio.com/) - Database Interaction
+- [JavaScript](https://code.visualstudio.com/) - User Interaction
+- [MongoDB](https://code.visualstudio.com/) - Database
+- [Whimsical](whimsical.com) - ERD
+- [Google OAuth](https://developers.google.com/) - Authentication
+- JavaScript - User Interaction
+- CSS - Style
+- Figma - Wireframes
+- Express.js
+- Node.js
 
 ## 🚀 Icebox
 
