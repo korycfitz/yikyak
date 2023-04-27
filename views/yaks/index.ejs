@@ -3,19 +3,20 @@
 <%- include('../partials/nav') %>
 <main>
   <table class="container">
-      <% yaks.forEach((yak) => { %>
+    <% for (let i = yaks.length - 1; i > 0; i--){ %>
       <tr class="row">
-        <td><%= yak.createdAt.toLocaleTimeString() %></td>
-        <td id=<%= yak.author %>><%= yak.message %></td>
-        <td><%= yak.likes %></td>
-        <td><a href="/yaks/<%= yak._id %>">Replies</a></td>
+        <td><%= yaks[i].createdAt.toLocaleDateString() %></td>
+        <td><%= yaks[i].createdAt.toLocaleTimeString() %></td>
+        <td><%= yaks[i].message %></td>
+        <td><%= yaks[i].likes %></td>
+        <td class="reply-tag"><a href="/yaks/<%= yaks[i]._id %>">Replies</a></td>
         <td>
-          <form action="/yaks/<%= yak._id %>?_method=DELETE" method="POST">
-            <button type="submit">X</button>
+          <form action="/yaks/<%= yaks[i]._id %>?_method=DELETE" method="POST">
+            <button class="reply-btn" id="delete-btn" type="submit">X</button>
           </form>
         </td>        
       </tr>
-      <% }) %>
+    <% } %>
     </tbody>
   </table>
 </main>

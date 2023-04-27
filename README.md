@@ -15,27 +15,25 @@ I decided to build this application because social media users are often disuade
 
 ## 🏁 Getting Started
 
-Visit https://battleship-kory-fitzgerald.netlify.app to play the game.
+Visit https://annonymous.fly.dev/ <a href="https://annonymous.fly.dev/">Annonymous.fly.dev</a>
 
 ### Prerequisites
-
 Access to the internet is required.<br>
 The latest version of Google Chrome is recommended for the best user experience, but not required.
 
 ## 🎈 Attributions
 
 - [The-Documentation-Compendium by Kyle Lobo](https://github.com/kylelobo/The-Documentation-Compendium) - README Format
-- [Annimate.css](https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css) - Annimation
 - [Google Fonts](https://fonts.google.com/) - Style
-- [Flaticon](https://pngtree.com/so/ox-logo) - Favicon
-
+- [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
+- [Flaticon](https://www.flaticon.com) - Image
 
 ## ⛏️ Technologies Used
 
 - HTML - Structure
 - CSS - Style
 - JavaScript - User Interaction
-- [Nelify](https://app.netlify.com/) - Deployment
+- [Fly](https://fly.io/) - Deployment
 - [Github](https://github.com/) - Version Control, Code Hosting
 - [Git](https://git-scm.com/) - Version Control and Source Code Management
 - [Visual Studio Code](https://code.visualstudio.com/) - Debugging, Version Control

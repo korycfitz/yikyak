@@ -4,7 +4,9 @@ const Schema = mongoose.Schema
 
 const profileSchema = new Schema({
   name: String,
-  avatar: String
+  avatar: String,
+  yaks: [{type: Schema.Types.ObjectId, ref: 'Yak' }],
+  likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
 }, {
   timestamps: true
 })

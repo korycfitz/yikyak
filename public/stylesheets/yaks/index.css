@@ -3,11 +3,12 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-th, td {
+td {
   border: 0, 5px, 0, 0 rgb(180, 31, 31);
   padding: 8px;
   text-align: center;
 }
+
 th {
   background-color: rgb(244, 244, 244);
 }
@@ -15,30 +16,36 @@ th {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
 .container td:nth-child(1) {
-  min-width: 250px;
+  width: 150px;
+  padding-left: 20px;
 }
-
 .container td:nth-child(2) {
-  min-width: 500px;
+  width: 33%;
 }
 
 .container td:nth-child(3) {
-  min-width: 100px;
+  width:66%;
 }
 
 .container td:nth-child(4) {
+  width: 200px;
   min-width: 100px;
 }
 
 .container td:nth-child(5) {
-  min-width: 75px;
+  width: 200px;
+  min-width: 100px;
+}
+
+.container td:nth-child(6) {
+  width: 150px;
+  min-width: 150px;
 }
 
 .container a, button {
   border-radius: 4px;
-  background-color: #b8c0c2;
+  background-color: #a7adae;
   padding: 4px;
   text-decoration: none;
   font-size: 16px;
@@ -51,13 +58,21 @@ tr:nth-child(even) {
 
 .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
+  min-width: 100vh;
 }
 
 .row {  
   height: calc(15vh - 5px);
-  padding: 20px;
-  border: 1px solid #1a0606;
-  border-radius: 5px;
+}
+
+.delete-btn {
+  height: 30px;
+  background-color: #d9d4d4;
+}
+
+td > a {
+  height: 50px;
+  background-color: #d12828;
 }

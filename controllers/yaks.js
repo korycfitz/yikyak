@@ -7,7 +7,7 @@ function newYak(req, res) {
 }
 
 function create(req, res) {
-  req.body.author = req.user.profile._id
+  req.body.owner = req.user.profile._id
   if (req.body.likes) {
     req.body.likes = req.body.likes.split(', ')
   }
@@ -22,7 +22,6 @@ function create(req, res) {
   }
   Yak.create(req.body)
   .then(yak => {
-    console.log(req.body)
     res.redirect('/yaks')
   })
   .catch(err => {
@@ -33,7 +32,9 @@ function create(req, res) {
 
 function index(req, res) {
   Yak.find({})
+  .populate('owner')
   .then(yaks => {
+    console.log(yaks)
     res.render('yaks/index', {
       yaks: yaks,
       title: 'All Yaks'
@@ -46,12 +47,10 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  console.log(req.body)
   Yak.findById(req.params.yakId)
-  // .populate("author")
   .then(yak => {
     res.render('yaks/show', { 
-      title: 'Add Comment', 
+      title: 'All Yaks', 
       yak: yak
     })    
   })
@@ -78,7 +77,7 @@ function edit(req, res) {
   .then(yak => {
     res.render("yaks/edit", {
       yak,
-      title: "Edit Yak"
+      title: "Post Yak"
     })
   })
   .catch(err => {
