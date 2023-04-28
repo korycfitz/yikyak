@@ -15,7 +15,7 @@
           <td>
             <% if (user) if (yaks[i].owner._id.equals(user.profile._id)) { %>
               <form action="/yaks/<%= yaks[i]._id %>?_method=DELETE" method="POST">
-                <button class="reply-btn" id="delete-btn" type="submit">X</button>
+                <button class="btn" id="delete-btn" type="submit">X</button>
               </form>
             <% } %>
           </td>        
@@ -26,4 +26,3 @@
 </main>
 
 <%- include('../partials/footer') %>
-

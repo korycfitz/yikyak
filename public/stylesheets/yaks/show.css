@@ -54,3 +54,68 @@ section div:nth-child(even) {
   grid-column: 2 / 3;
   margin-bottom: 24px;
 }
+
+table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100vh;   
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+table td:nth-child(1) {
+  width: 20%;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+table td:nth-child(2) {
+  width: 20%;
+  text-align: left;
+  padding-left: 50px;
+  font-size: 20px;
+}
+
+table td:nth-child(3) {
+  width:60%;
+  font-size: 35px;
+  font-size: 20px;
+}
+
+/* Each yak's likes will be displayed in this row, and it does not */
+table td:nth-child(4) {
+  width: 0px;
+  min-width: 100px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #424748;
+  height: 30px;
+  background-color: #ffffff;
+}
+
+button a:hover, button:hover {
+  background-color: rgb(102, 197, 154);
+}
+
+.row {  
+  height: calc(15vh - 5px);
+}
+
+h1 > p {
+  font-size: 15px;
+}
+.msg {
+  text-align: right;
+  font-weight: bold;
+}

@@ -17,3 +17,13 @@ form > button {
   margin-left: auto;
   font-size: 22px;
 }
+
+.msg {
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 50px
+}
+#new-form {
+  text-align: right;
+  font-weight: bold;
+}

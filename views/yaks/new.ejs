@@ -5,10 +5,19 @@
 <main>
   <h1><%= title %></h1>
   <form id="new-form" action="/yaks" method="POST">
-    <label for="message-input">Message:</label>
-    <input type="text" name="message" id="message-input">
+    <label class="msg" for="message-input">Message:</label>
+    <textarea name="message" 
+    class="form-control form-control-dark"
+    id="content-textarea"
+    placeholder="What's on your mind?"
+    autocomplete="off"
+    required
+    style="font-size: 20px;"
+  ></textarea>
     <button type="submit">POST YAK</button>
   </form>
 </main>
 
+
 <%- include("../partials/footer") %>
+
