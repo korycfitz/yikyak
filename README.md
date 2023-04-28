@@ -1,17 +1,17 @@
 <div align="center">
- <img src="/assets/yik-yak.png" alt="Project logo" height=300px></a>
+  <img width="400px" height="300px" alt="yikyak" src="./public/assets/yikyak.png">
 </div>
 
 <h3 align="center">Yikyak</h3>
 
 ---
 
-<p align="center"> Welcome to Yikyak. This social media platform allows users to share what's on their mind, while staying completely annonymous.
+<p align="center"> Welcome to Yikyak. This social media platform allows users to share what's on their minds while staying completely annonymous.
 </p>
 
 ## 🧐 About
 
-I decided to build this application because social media users are often disuaded from posting what's on their mind, because of their fear of public perception. Yikyak, the most popular social media platform for annonymous posting, was removed in the United States. In response, I built this application to give back to the users their ability to stay annoymous while posting.
+I decided to build this application because many social media users do not post what's on their minds. The fear of public perception often dissuades them from posting what they think. Yikyak, the most popular social media platform for annonymous posting, was removed in the United States. In response, I built this application to give back to the users their ability to stay anonymous while posting.
 
 ## 🏁 Getting Started
 
@@ -25,7 +25,6 @@ The latest version of Google Chrome is recommended for the best user experience,
 ## 🎈 Attributions
 
 - [The-Documentation-Compendium by Kyle Lobo](https://github.com/kylelobo/The-Documentation-Compendium) - README Format
-- [Google Fonts](https://fonts.google.com/) - Style
 - [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
 - [Flaticon](https://www.flaticon.com) - Images
 - [Font Awesome](Fonthttps://fontawesome.com/) - Font and Style
@@ -36,24 +35,22 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Github](https://github.com/) - Version Control, Code Hosting
 - [Git](https://git-scm.com/) - Version Control and Source Code Management
 - [Visual Studio Code](https://code.visualstudio.com/) - Debugging, Version Control
-- [EJS](https://code.visualstudio.com/) - User Interface
-- [Trello](https://code.visualstudio.com/) - Project Planning
-- [Mongoose](https://code.visualstudio.com/) - Database Interaction
-- [JavaScript](https://code.visualstudio.com/) - User Interaction
-- [MongoDB](https://code.visualstudio.com/) - Database
-- [Whimsical](whimsical.com) - ERD
+- [EJS](https://ejs.co/) - Embedding
+- [Trello](https://trello.com/) - Project Planning
+- [Mongoose](https://mongoosejs.com/) - Application Modeling
+- [Whimsical](https://whimsical.com/) - ERD
 - [Google OAuth](https://developers.google.com/) - Authentication
-- JavaScript - User Interaction
-- CSS - Style
-- Figma - Wireframes
-- Express.js
-- Node.js
+- [MongoDB](Databasemongodb.com/) - Database
+- [Figma](figma.com/) - Wireframes
+- [Express.js](https://expressjs.com/) - Web Framework
+- [Node.js](https://nodejs.org/en/) - Runtime Environment
+- [JavaScript] - User Interaction
+- [CSS] - Style
 
 ## 🚀 Icebox
 
 - Allow the user to like and dislike posts and comments.
 - Iterate on the current styling.
-- Associate likes with a user's profile.
 - AAU, I will be able to view a 'yakarma' score, calculated from the 
 
 ## ✍️ Authors

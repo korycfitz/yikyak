@@ -8,10 +8,6 @@ function newYak(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  //once I have the likes model, I will need to split the entries, but for now, I will delete it after becuase it will be empty
-  if (req.body.likes) {
-    req.body.likes = req.body.likes.split(', ')
-  }
   if (req.body.comments) {
     req.body.comments = req.body.comments.split(', ')
   }
@@ -84,12 +80,8 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  //Yaks will be able to have likes, in the future, but will delete key because it is empty
-  if (req.body.likes) {
-    req.body.likes = req.body.likes.split(', ')
-  }
   if (req.body.comments) {
-    req.body.likes = req.body.comments.split(', ')
+    req.body.comments = req.body.comments.split(', ')
   }
   Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
   .then(yak => {
@@ -102,9 +94,6 @@ function update(req, res) {
 }
 
 function createComment(req, res) {
-  if (req.body.likes) {
-    req.body.likes = req.body.likes.split(', ')
-  }
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
