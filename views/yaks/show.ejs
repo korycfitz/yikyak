@@ -1,17 +1,18 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
+
 <main>
   <h1>
     <%= yak.message %>
     <p>
-    <%= yak.createdAt.toLocaleTimeString() + " | "%> 
-    <%= yak.createdAt.toLocaleDateString() %> 
-    <% if (user) if (yak.owner._id.equals(user.profile._id)) { %>
-      <a href="/yaks/<%= yak._id %>/edit">
-        <button id="edit">Edit Yak</button>
-      </a>
-    <% } %>
+      <%= yak.createdAt.toLocaleTimeString() + " | "%> 
+      <%= yak.createdAt.toLocaleDateString() %> 
+      <% if (user) if (yak.owner._id.equals(user.profile._id)) { %>
+        <a href="/yaks/<%= yak._id %>/edit">
+          <button id="edit">Edit Yak</button>
+        </a>
+      <% } %>
     </p>
   </h1>
   <form 
@@ -19,37 +20,37 @@
     action="/yaks/<%= yak._id %>/comments"
     method="POST"
   >
-  <label class="msg" for="reply-form">Reply:</label>
-  <textarea name="content" 
-    class="form-control form-control-dark"
-    id="content-textarea"
-    placeholder="Enter Reply Here..."
-    autocomplete="off"
-    required
-    style="font-size: 20px;"
-  ></textarea>
-  <button type="submit" class="btn btn-reply">
-    Post Reply
-  </button>
-</form>
-<% if (yak.comments.length) { %>
-  <h2>Replies</h2>
-  <table class="reply-container">
-    <tbody>
-      <% yak.comments.forEach(function(comment) { %>
-        <tr class="row">
-          <td><%= comment.createdAt.toLocaleDateString() %></td>
-          <td><%= comment.createdAt.toLocaleTimeString() %></td>
-          <td><%= comment.content %></td>
-          <%# comments will have likes displayed next ot them %>
-          <td><%= comment.likes %></td>
-        </tr>
-      <% }) %>
-    </tbody>
-  </table>
-<% } else { %>
-  <h2>No Replies Yet</h2>
-<% } %>
+    <label class="msg" for="reply-form">Reply:</label>
+    <textarea name="content" 
+      class="form-control form-control-dark"
+      id="content-textarea"
+      placeholder="Enter Reply Here..."
+      autocomplete="off"
+      required
+      style="font-size: 20px;"
+    ></textarea>
+    <button type="submit" class="btn btn-reply">
+      Post Reply
+    </button>
+  </form>
+  <% if (yak.comments.length) { %>
+    <h2>Replies</h2>
+    <table class="reply-container">
+      <tbody>
+        <% yak.comments.forEach(function(comment) { %>
+          <tr class="row">
+            <td><%= comment.createdAt.toLocaleDateString() %></td>
+            <td><%= comment.createdAt.toLocaleTimeString() %></td>
+            <td><%= comment.content %></td>
+            <%# comments will have likes displayed next ot them %>
+            <td><%= comment.likes %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h2>No Replies Yet</h2>
+  <% } %>
 </main>
 
 <%- include('../partials/footer') %>
