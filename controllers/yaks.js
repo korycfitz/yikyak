@@ -14,9 +14,6 @@ function create(req, res) {
   if (req.body.comments) {
     req.body.likes = req.body.likes.split(', ')
   }
-  if (req.body.yaks) {
-    req.body.likes = req.body.likes.split(', ')
-  }
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -86,11 +83,15 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Yak.findById(req.params.yakId)
+  //Yaks will be able to have likes, so 
+  if (req.body.likes) {
+    req.body.likes = req.body.likes.split(', ')
+  }
+  if (req.body.comments) {
+    req.body.likes = req.body.comments.split(', ')
+  }
+  Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
   .then(yak => {
-    if (yak.owner.equals(req.user.profile._id)) {
-      Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
-    }
     res.redirect(`/yaks/${yak._id}`)
   })
   .catch(err => {
