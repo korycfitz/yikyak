@@ -86,7 +86,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  Yak.findById(req.params.tacoId)
+  Yak.findById(req.params.yakId)
   .then(yak => {
     if (yak.owner.equals(req.user.profile._id)) {
       Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
