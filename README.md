@@ -29,7 +29,7 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [The-Documentation-Compendium by Kyle Lobo](https://github.com/kylelobo/The-Documentation-Compendium) - README Format
 - [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
 - [Flaticon](https://www.flaticon.com) - Images
-- [Font Awesome](Fonthttps://fontawesome.com/) - Font and Style
+- [Font Awesome](https://fontawesome.com/) - Font and Style
 
 ## ⛏️ Technologies Used
 
