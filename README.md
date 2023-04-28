@@ -1,5 +1,5 @@
 <div align="center">
- <img height=300px src="/assets/yik-yak.png" alt="Project logo"></a>
+ <img src="/assets/yik-yak.png" alt="Project logo" height=300px></a>
 </div>
 
 <h3 align="center">Yikyak</h3>
