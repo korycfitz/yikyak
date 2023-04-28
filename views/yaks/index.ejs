@@ -10,7 +10,7 @@
           <td><%= yaks[i].createdAt.toLocaleDateString() %></td>
           <td><%= yaks[i].createdAt.toLocaleTimeString() %></td>
           <td><%= yaks[i].message %></td>
-          <td><%= yaks[i].likes %></td>        <!-- this will display the yaks likes once the model is built out -->
+          <td><%= yaks[i].likes %></td>        <!-- this will display the yak's likes once the model is built out -->
           <td class="reply-tag"><a href="/yaks/<%= yaks[i]._id %>">Replies</a></td>
           <td>
             <% if (user) if (yaks[i].owner._id.equals(user.profile._id)) { %>
