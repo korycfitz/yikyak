@@ -10,7 +10,7 @@
     action="/yaks/<%= yak._id %>?_method=PUT"
     method="POST">
     <label for="message-input">Message:</label>
-    <input type="text" name="message" id="message-input">
+    <input type="text" name="message" id="message-input" placeholder= "<%= yak.message %>">
     <button type="submit">Update Yak</button>
   </form>
 </main>
