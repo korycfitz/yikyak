@@ -1,15 +1,15 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/yaks/show.css" />
 <%- include('../partials/nav') %>
 <main>
   <h1>
-    <%= yak.message %>
+    <%= yak.message + " - " %>
+    <%= yak.createdAt.toLocaleTimeString() %> 
     <%= yak.createdAt.toLocaleDateString() %> 
     <a href="/yaks/<%= yak._id %>/edit">
       <button>Edit Yak</button>
     </a>
   </h1>
-  <div> <%= yak.likes.join(', ') %> </div>
-  <!-- add likes here -->
   <form 
     id="reply-form"
     action="/yaks/<%= yak._id %>/comments"
@@ -22,6 +22,7 @@
     placeholder="Enter Reply Here..."
     autocomplete="off"
     required
+    style="font-size: 30px"
   ></textarea>
   <button type="submit" class="btn btn-reply">
     Post Reply
@@ -30,14 +31,14 @@
 <!-- need to add reply here -->
 <% if (yak.comments.length) { %>
   <h2>Replies</h2>
-  <table>
+  <table class="reply-container">
     <tbody>
       <% yak.comments.forEach(function(comment) { %>
-        <tr>
-          <td><%= comment.content %></td>
+        <tr class="reply-row">
           <td><%= comment.createdAt.toLocaleDateString() %></td>
           <td><%= comment.createdAt.toLocaleTimeString() %></td>
-          <td><%= comment.Likes %></td>
+          <td><%= comment.content %></td>
+          <td><%= comment.likes %></td>
         </tr>
       <% }) %>
     </tbody>

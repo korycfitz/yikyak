@@ -3,12 +3,12 @@
 <%- include('../partials/nav') %>
 <main>
   <table class="container">
+    <tbody>
     <% for (let i = yaks.length - 1; i > 0; i--){ %>
       <tr class="row">
         <td><%= yaks[i].createdAt.toLocaleDateString() %></td>
         <td><%= yaks[i].createdAt.toLocaleTimeString() %></td>
         <td><%= yaks[i].message %></td>
-        <!-- Users will be able to view likes for each Yak here  -->
         <td><%= yaks[i].likes %></td>
         <td class="reply-tag"><a href="/yaks/<%= yaks[i]._id %>">Replies</a></td>
         <td>
@@ -23,5 +23,6 @@
     </tbody>
   </table>
 </main>
+
 <%- include('../partials/footer') %>
 
