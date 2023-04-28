@@ -16,6 +16,8 @@ I decided to build this application because many social media users do not post 
 ## 🏁 Getting Started
 
 Visit <a href="https://annonymous.fly.dev/">Yikyak</a> to use the app.
+<br>
+Visit <a href="https://trello.com/b/JXLooI1t/yik-yak">Trello</a> to view the planning materials
 
 ### Prerequisites
 
