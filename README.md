@@ -52,9 +52,9 @@ The latest version of Google Chrome is recommended for the best user experience,
 ## 🚀 Icebox
 
 - Iterate on the current styling.
-- AAU, I want to be able to like and dislike posts and comments.
-- AAU that owns a yak, I want to have the option to pin a comment, displaying it at the top of the comments table.
-- AAU, I want to be able to view my 'yakarma' score, calculated from the net total likes of my profile.
+- AAU, I went to press a button to like and dislike yaks and comments.
+- AAU that owns a yak, I want to press a button to pin a comment, displaying it at the top of the comments table.
+- AAU, I want to be able to view my 'yakarma' score, calculated from the net total likes associated with my profile.
 
 ## ✍️ Authors
 
