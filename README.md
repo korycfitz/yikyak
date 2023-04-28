@@ -1,5 +1,5 @@
 <div align="center">
- <img height=300px src="./assets/christmas-ship.png" alt="Project logo"></a>
+ <img height=300px src="/assets/yik-yak.png" alt="Project logo"></a>
 </div>
 
 <h3 align="center">Yikyak</h3>
@@ -15,7 +15,7 @@ I decided to build this application because social media users are often disuade
 
 ## 🏁 Getting Started
 
-Visit <a href="https://annonymous.fly.dev/">Annonymous.fly.dev</a> to use the app.
+Visit <a href="https://annonymous.fly.dev/">Yikyak</a> to use the app.
 
 ### Prerequisites
 
@@ -28,7 +28,7 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Google Fonts](https://fonts.google.com/) - Style
 - [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
 - [Flaticon](https://www.flaticon.com) - Images
-- [Font Awesome](Fonthttps://fontawesome.com/) - Icons
+- [Font Awesome](Fonthttps://fontawesome.com/) - Font and Style
 
 ## ⛏️ Technologies Used
 
@@ -54,9 +54,7 @@ The latest version of Google Chrome is recommended for the best user experience,
 - Allow the user to like and dislike posts and comments.
 - Iterate on the current styling.
 - Associate likes with a user's profile.
-- Improve the logic for the computer's ship placement on the board.
-- Implement AI functionality to store the user's and the computer's guesses and to have the computer strategically place its ships
-- AAU or as a guest, I should be able to see the cumulative likes next to replies.
+- AAU, I will be able to view a 'yakarma' score, calculated from the 
 
 ## ✍️ Authors
 
