@@ -46,8 +46,8 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Figma](figma.com/) - Wireframes
 - [Express.js](https://expressjs.com/) - Web Framework
 - [Node.js](https://nodejs.org/en/) - Runtime Environment
-- [JavaScript] - User Interaction
-- [CSS] - Style
+- JavaScript - User Interaction
+- CSS - Style
 
 ## 🚀 Icebox
 
