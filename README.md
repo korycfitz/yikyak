@@ -28,6 +28,7 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Google Fonts](https://fonts.google.com/) - Style
 - [Pngtree](https://pngtree.com/so/ox-logo) - Favicon
 - [Flaticon](https://www.flaticon.com) - Images
+- [Font Awesome](Fonthttps://fontawesome.com/) - Icons
 
 ## ⛏️ Technologies Used
 
@@ -59,5 +60,5 @@ The latest version of Google Chrome is recommended for the best user experience,
 
 ## ✍️ Authors
 
-- [@korycfitz](https://github.com/korycfitz) - Idea & work
+- [@korycfitz](https://github.com/korycfitz) - Work
 - [yikyak](https://yikyak.com/) - Idea

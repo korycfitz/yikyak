@@ -1,16 +1,16 @@
-table {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100vh;
   font-size: 30px;      
   border-collapse: collapse;
   width: 100%;
 }
+
 td {
-  border: 0, 5px, 0, 0 rgb(180, 31, 31);
   padding: 8px;
   text-align: center;
-}
-
-th {
-  background-color: rgb(244, 244, 244);
 }
 
 tr:nth-child(even) {
@@ -18,16 +18,21 @@ tr:nth-child(even) {
 }
 .container td:nth-child(1) {
   width: 150px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
+
 .container td:nth-child(2) {
   width: 33%;
+  text-align: left;
+  padding-left: 50px;
 }
 
 .container td:nth-child(3) {
   width:66%;
+  font-size: 35px;
 }
 
+/* Each yak's likes will be displayed in this row, and it does not */
 .container td:nth-child(4) {
   width: 200px;
   min-width: 100px;
@@ -43,7 +48,7 @@ tr:nth-child(even) {
   min-width: 150px;
 }
 
-.container a, button {
+.container button {
   border-radius: 4px;
   background-color: #a7adae;
   padding: 4px;
@@ -56,13 +61,6 @@ tr:nth-child(even) {
   background-color: rgb(53, 194, 131);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 100vh;
-}
-
 .row {  
   height: calc(15vh - 5px);
 }
@@ -73,5 +71,7 @@ tr:nth-child(even) {
 }
 
 .reply-tag a {
-  background-color: #d12828;
+  background-color: #b7b1b1;
+  text-decoration: none;
+  font-size: 25px;
 }
