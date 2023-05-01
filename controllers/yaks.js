@@ -8,9 +8,6 @@ function newYak(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  if (req.body.comments) {
-    req.body.comments = req.body.comments.split(', ')
-  }
   Yak.create(req.body)
   .then(yak => {
     res.redirect('/yaks')
