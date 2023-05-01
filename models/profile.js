@@ -7,7 +7,7 @@ const profileSchema = new Schema({
   avatar: String,
   yaks: [{type: Schema.Types.ObjectId, ref: 'Yak' }],
   //profiles will have likes, once the model is built out, in order to keep track of a profiles net like count
-  likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
+  // likes: [{type: Schema.Types.ObjectId, ref: 'Like' }],
 }, {
   timestamps: true
 })

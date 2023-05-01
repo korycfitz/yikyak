@@ -11,9 +11,6 @@ function create(req, res) {
   if (req.body.comments) {
     req.body.comments = req.body.comments.split(', ')
   }
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Yak.create(req.body)
   .then(yak => {
     res.redirect('/yaks')
@@ -80,9 +77,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  if (req.body.comments) {
-    req.body.comments = req.body.comments.split(', ')
-  }
   Yak.findByIdAndUpdate(req.params.yakId, req.body, {new: true})
   .then(yak => {
     res.redirect(`/yaks/${yak._id}`)
@@ -94,9 +88,6 @@ function update(req, res) {
 }
 
 function createComment(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Yak.findById(req.params.yakId)
   .then(yak => {
     yak.comments.push(req.body)
