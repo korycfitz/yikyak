@@ -6,12 +6,12 @@
 
 ---
 
-<p align="center"> Welcome to Yikyak. This social media platform allows users to share what's on their minds while staying completely annonymous.
+<p align="center"> Welcome to Yikyak. This social media platform allows users to share what's on their minds while staying completely anonymous.
 </p>
 
 ## 🧐 About
 
-I decided to build this application because many social media users do not post what's on their minds. The fear of public perception often dissuades them from posting what they think. Yikyak, the most popular social media platform for annonymous posting, was removed in the United States. In response, I built this application to give back to the users their ability to stay anonymous while posting.
+I decided to build this application because many social media users do not post what's on their minds. The fear of public perception often dissuades them from posting what they think. Yikyak, the most popular social media platform for anonymous posting, was removed in the United States. In response, I built this application to give back to the users their ability to stay anonymous while posting.
 
 ## 🏁 Getting Started
 
