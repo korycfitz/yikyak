@@ -11,7 +11,7 @@ router.get('/new', yaksCtrl.new)
 // POST /yaks
 router.post('/', isLoggedIn, yaksCtrl.create)
 router.post('/:yakId/comments', isLoggedIn,yaksCtrl.createComment)
-router.get('/:yakId', yaksCtrl.show)
+router.get('/:yakId', isLoggedIn, yaksCtrl.show)
 // localhost:3000/yaks/:yakId
 router.delete("/:yakId", isLoggedIn, yaksCtrl.delete)
 // localhost:3000/yaks/:yakId/edit
