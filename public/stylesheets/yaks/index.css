@@ -34,7 +34,6 @@ tr:nth-child(even) {
   font-size: 20px;
 }
 
-/* Each yak's likes will be displayed in this row, and it does not */
 .container td:nth-child(4) {
   width: 200px;
   min-width: 100px;
@@ -44,11 +43,6 @@ tr:nth-child(even) {
 .container td:nth-child(5) {
   width: 200px;
   min-width: 100px;
-}
-
-.container td:nth-child(6) {
-  width: 150px;
-  min-width: 150px;
 }
 
 .container button {

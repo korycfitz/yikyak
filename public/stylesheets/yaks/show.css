@@ -42,11 +42,6 @@ table td:nth-child(3) {
   padding-left: 10%;
 }
 
-/* Each yak's likes will be displayed in this row, and it does not */
-/* table td:nth-child(4) {
-  width: 0px;
-  min-width: 100px;
-} */
 button {
   border-radius: 4px;
   padding: 4px;
