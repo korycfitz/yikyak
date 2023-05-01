@@ -5,22 +5,21 @@
 <main>
   <table class="container">
     <tbody>
-      <% for (let i = yaks.length - 1; i > 0; i--){ %>
+      <% yaks.forEach(yak => { %>
         <tr class="row">
-          <td><%= yaks[i].createdAt.toLocaleDateString() %></td>
-          <td><%= yaks[i].createdAt.toLocaleTimeString() %></td>
-          <td><%= yaks[i].message %></td>
-          <td><%= yaks[i].likes %></td>        <!-- this will display the yak's likes once the model is built out -->
-          <td class="reply-tag"><a href="/yaks/<%= yaks[i]._id %>">Replies</a></td>
+          <td><%= yak.createdAt.toLocaleDateString() %></td>
+          <td><%= yak.createdAt.toLocaleTimeString() %></td>
+          <td><%= yak.message %></td>
+          <td class="reply-tag"><a href="/yaks/<%= yak._id %>">Replies</a></td>
           <td>
-            <% if (user) if (yaks[i].owner._id.equals(user.profile._id)) { %>
-              <form action="/yaks/<%= yaks[i]._id %>?_method=DELETE" method="POST">
+            <% if (user) if (yak.owner._id.equals(user.profile._id)) { %>
+              <form action="/yaks/<%= yaks._id %>?_method=DELETE" method="POST">
                 <button class="btn" id="delete-btn" type="submit">X</button>
               </form>
             <% } %>
           </td>        
         </tr>
-      <% } %>
+      <% }) %>
     </tbody>
   </table>
 </main>
