@@ -42,8 +42,8 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Mongoose](https://mongoosejs.com/) - Application Modeling
 - [Whimsical](https://whimsical.com/) - ERD
 - [Google OAuth](https://developers.google.com/) - Authentication
-- [MongoDB](Databasemongodb.com/) - Database
-- [Figma](figma.com/) - Wireframes
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Figma](https://figma.com/) - Wireframes
 - [Express.js](https://expressjs.com/) - Web Framework
 - [Node.js](https://nodejs.org/en/) - Runtime Environment
 - JavaScript - User Interaction
