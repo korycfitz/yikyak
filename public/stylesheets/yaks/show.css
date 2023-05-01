@@ -1,15 +1,11 @@
-ul {
-  margin: 0 0 16px;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  font-weight: bold;
-}
-
 table {
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100vh;   
+  border-collapse: collapse;
+  width: 100%;
+  align-items: center;
 }
 
 table thead th {
@@ -27,48 +23,6 @@ form * {
   border-radius: 5px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 16px;
-}
-
-section div:nth-child(even) {
-  font-weight: bold;
-}
-
-#add-review-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 16px;
-  margin-bottom: 20px;
-}
-
-#add-reply-form > reply-form {
-  width: 250px;
-}
-
-#add-reply-form > button {
-  font-size: 16px;
-  width: 160px;
-  grid-column: 2 / 3;
-  margin-bottom: 24px;
-}
-
-table {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 100vh;   
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  padding: 8px;
-  text-align: center;
-}
-
 table td:nth-child(1) {
   width: 20%;
   padding-left: 30px;
@@ -84,16 +38,15 @@ table td:nth-child(2) {
 
 table td:nth-child(3) {
   width:60%;
-  font-size: 35px;
-  font-size: 20px;
+  font-size: 30px;
+  padding-left: 10%;
 }
 
 /* Each yak's likes will be displayed in this row, and it does not */
-table td:nth-child(4) {
+/* table td:nth-child(4) {
   width: 0px;
   min-width: 100px;
-}
-
+} */
 button {
   border-radius: 4px;
   padding: 4px;
@@ -109,12 +62,13 @@ button a:hover, button:hover {
 }
 
 .row {  
-  height: calc(15vh - 5px);
+  height: calc(10vh - 5px);
 }
 
 h1 > p {
   font-size: 15px;
 }
+
 .msg {
   text-align: right;
   font-weight: bold;
