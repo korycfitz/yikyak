@@ -48,6 +48,7 @@ The latest version of Google Chrome is recommended for the best user experience,
 - [Node.js](https://nodejs.org/en/) - Runtime Environment
 - JavaScript - User Interaction
 - CSS - Style
+- SCSS - Style
 
 ## 🚀 Icebox
 
